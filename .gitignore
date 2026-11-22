@@ -1,0 +1,37 @@
+# Credentials and personal configuration
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*.json
+secrets*.json
+
+# Local setup, downloaded assets, and generated outputs
+.article-explainer/
+.article-explainer-bootstrap/
+.venv/
+venv/
+models/
+media/
+cache/
+logs/
+work/
+outputs/
+*.wav
+*.mp3
+*.mp4
+*.pth
+*.pt
+*.whl
+*.zip
+
+# Python and operating-system metadata
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+._*
+__MACOSX/
+Thumbs.db

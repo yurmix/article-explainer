@@ -1,0 +1,4 @@
+interface:
+  display_name: "Article Explainer"
+  short_description: "Narrated article websites with grounded chat"
+  default_prompt: "Use $article-explainer to turn this article into a faithful narrated website with animated visuals and source-grounded chat, using free-first mode."
