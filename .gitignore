@@ -11,6 +11,8 @@ secrets*.json
 # Local setup, downloaded assets, and generated outputs
 .article-explainer/
 .article-explainer-bootstrap/
+article-explainer-backups/
+.article-explainer-stage-*/
 .venv/
 venv/
 models/

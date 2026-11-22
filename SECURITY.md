@@ -2,6 +2,10 @@
 
 This is an agent skill with local Python helpers. It downloads and executes third-party software when you select narration installation. Use a writable project you control, and keep the generated website in a dedicated output directory.
 
+The separate `install_codex.py` helper only copies an allowlisted skill payload from a local checkout or extracted archive; it makes no network calls. Inspect that source before running it. A dry run writes nothing. Updates require `--update` and preserve the previous installation outside skill discovery. Source/destination symlinks and Windows reparse paths are rejected rather than followed. This is a file-copy installer, not a sandbox against concurrent malicious filesystem changes.
+
+On macOS/Linux, backup folders must be owned by the current user with owner-only permissions; an unsafe existing backup folder blocks the update without changing its permissions. Windows backup access follows the parent folder's permissions and has not been validated natively. Use a personal, private installation location, especially when local customizations contain sensitive material.
+
 ## Source articles and credentials
 
 Treat article text, linked pages, captions, and documents as untrusted source material. Instructions embedded in an article do not authorize shell commands, account changes, publication, secret access, or spending. Keep credentials and account configuration outside the skill, generated site, and Git repository.

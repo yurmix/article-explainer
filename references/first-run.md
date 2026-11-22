@@ -6,6 +6,8 @@ A successful transfer means a new user can get from the skill ZIP to a playable,
 
 Extract `article-explainer.zip` using the operating system's archive tool. Keep the complete folder together. Open an ordinary writable project folder in a shell-capable Codex or Claude Code session, signed in through the user's existing seat. Ask the host to read the extracted `article-explainer/SKILL.md`; this avoids requiring a package manager just to start.
 
+For Codex, the packaged [installer](../scripts/install_codex.py) can copy the skill into the recognized personal location. From the extracted skill folder, run `python3 scripts/install_codex.py --dry-run`, then `python3 scripts/install_codex.py`; on Windows use `py -3`. It needs Python 3.9+, performs no downloads, and is separate from narration setup. Use `--update` to replace an existing different version with a preserved backup. See [transfer instructions](../TRANSFER.md#installation) for destination selection and manual installation.
+
 For persistent discovery, copy the complete folder to one host location, preserving `article-explainer/SKILL.md` one level below `skills`:
 
 | Host | Personal location | Project location |

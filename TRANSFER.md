@@ -4,7 +4,7 @@ This is a skill package, not a finished website or subscription. Codex is the pr
 
 ## Installation
 
-**Codex:** place the entire `article-explainer` folder in the configured personal skills directory. Current shared-skill guidance uses `~/.agents/skills/`; preserve an already recognized `~/.codex/skills/` location on hosts configured that way rather than creating duplicate copies. See [first-run.md](references/first-run.md) for current project and platform routes. Refresh discovery or start a new session if needed. Invoke `$article-explainer` or describe the task naturally.
+**Codex:** from the extracted folder, run `python3 scripts/install_codex.py --dry-run`, then `python3 scripts/install_codex.py` (Windows: use `py -3`). The [installer](scripts/install_codex.py) requires Python 3.9+ and copies only packaged skill files, without downloads or API calls. It uses `~/.agents/skills/` for a new setup, preserves a sole existing copy in `~/.agents/skills/` or `~/.codex/skills/`, and honors an explicit `CODEX_HOME/skills` or `--skills-dir` override. For changes to an existing installation, add `--update`; the old folder is backed up outside skill discovery, with the restore destination printed. Identical installs are unchanged. Without Python, copy the complete skill folder into your host's recognized skills directory. Avoid duplicate copies. The skill is available on the next turn; restart Codex if it does not appear. Invoke `$article-explainer` or describe the task naturally. See [first-run.md](references/first-run.md) for project and platform setup.
 
 **Claude Code:** copy the folder to `~/.claude/skills/article-explainer/` for personal use, or `.claude/skills/article-explainer/` in a project. Invoke `/article-explainer` or describe the workflow.
 
